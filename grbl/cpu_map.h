@@ -79,10 +79,10 @@
   #define CONTROL_DDR       DDRC
   #define CONTROL_PIN       PINC
   #define CONTROL_PORT      PORTC
-  #define CONTROL_RESET_BIT         0  // ProMini Analog Pin 0
-  #define CONTROL_FEED_HOLD_BIT     1  // ProMini Analog Pin 1
-  #define CONTROL_CYCLE_START_BIT   2  // ProMini Analog Pin 2
-  #define CONTROL_SAFETY_DOOR_BIT   1  // ProMini Analog Pin 1 NOTE: Safety door is shared with feed hold. Enabled by config define.m
+  #define CONTROL_RESET_BIT         1  // ProMini Analog Pin 0
+  #define CONTROL_FEED_HOLD_BIT     2  // ProMini Analog Pin 1
+  #define CONTROL_CYCLE_START_BIT   3  // ProMini Analog Pin 2
+  #define CONTROL_SAFETY_DOOR_BIT   2  // ProMini Analog Pin 1 NOTE: Safety door is shared with feed hold. Enabled by config define.m
   #define CONTROL_INT       PCIE1  // Pin change interrupt enable pin
   #define CONTROL_INT_vect  PCINT1_vect
   #define CONTROL_PCMSK     PCMSK1 // Pin change interrupt register
@@ -96,7 +96,7 @@
   #define PROBE_BIT       5  // ProMini Analog Pin 5
   #define PROBE_MASK      (1<<PROBE_BIT)
 
-  #if !defined(ENABLE_DUAL_AXIS)c
+  #if !defined(ENABLE_DUAL_AXIS)
 
     // Define flood and mist coolant enable output pins.
     #define COOLANT_FLOOD_DDR   DDRC
@@ -104,7 +104,7 @@
     #define COOLANT_FLOOD_BIT   4  // ProMini Analog Pin 3e
     #define COOLANT_MIST_DDR   DDRC
     #define COOLANT_MIST_PORT  PORTC
-    #define COOLANT_MIST_BIT   3  // ProMini Analog Pin 4
+    #define COOLANT_MIST_BIT   0  // ProMini Analog Pin 4
 
     // Define spindle enable and spindle direction output pins.
     #define SPINDLE_ENABLE_DDR    DDRB
